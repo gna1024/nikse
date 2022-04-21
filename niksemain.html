@@ -21,59 +21,48 @@
                 position:absolute;
                 font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             }
-            .btn1, .btn2, .btn3, .btn4, .btn5{
-                color:white;
-                text-decoration: none;
+            .maincontainer{
+                background-color: bisque;
                 font-size: 200%;
-                font-weight: bold;
-                position:absolute;
+                font-family: cursive;
+                font-weight: bolder;
+                text-align: center;
             }
-            .btn1{
-                top: 37%;
-                left: 7%;
+            .container{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-left: 15px;
+                padding-right: 15px;
+                background-color: bisque;
+                font-size: 200%;
+                font-family: cursive;
+                font-weight: bolder;
+                text-align: center;
+                border-top: 4px double black;
             }
-            .btn2{
-                top: 43%;
-                left: 7%;
+            .bigcontainer{
+                display: flex;
+                flex-direction: column;
             }
-            .btn3{
-                top: 49%;
-                left: 7%;
+            a{
+                text-decoration: none;
+                color:brown;
             }
-            .btn4{
-                top: 55%;
-                left: 7%;
-            }
-            .btn5{
-                top: 61%;
-                left: 7%;
-            }
-            .btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover, .btn5:hover{
-                color: rgb(147, 255, 6)
-            }
-            .b1{
-                background-color:white;
-                left:92%;
-                border-radius: 5%;
-                position:relative;
-                width: 6%;
-                font-size: 130%;
-                font-family:Arial, Helvetica, sans-serif;
-             }
+            
         </style>
     </head>
     <body>
-        <input type="button" class="b1" value="Login">
-        <h1>Nikse</h1>
-        <a href="aboutcoffee.html" class="btn1">About coffee</a>
-        <br></br>
-        <a href="aboutcoffee.html" class="btn2">Price</a>
-        <br></br>
-        <a href="aboutcoffee.html" class="btn3">Order ahead</a>
-        <br></br>
-        <a href="aboutcoffee.html" class="btn4">Reviews</a>
-        <br></br>
-        <a href="aboutcoffee.html" class="btn5">About us</a>
+        <div class="bigcontainer">
+            <div class="maincontainer">Nikse coffee shop</div>
+            <div class="container">
+                <div><a href="aboutcoffee.html">About coffee</a></div> 
+                <div><a href="aboutcoffee.html">Price</a></div>
+                <div><a href="aboutcoffee.html">Order ahead</a></div>
+                <div><a href="aboutcoffee.html">Reviews</a></div>
+                <div><a href="aboutcoffee.html">About us</a></div>
+            </div>
+        </div>
     </body>
 </html>
 
