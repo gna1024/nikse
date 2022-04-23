@@ -1,10 +1,5 @@
-body {
-    background: url(coffee.jpeg);
-    background-position:center center;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    background-size:cover;
-    background-color: rgb(131, 63, 14);
+body{
+    background-color: whitesmoke;
 }
 .bigcontainer{
     display: flex;
@@ -30,4 +25,16 @@ a{
     color: brown;
     padding-left: 15px;
     padding-right: 15px;
+}
+table{
+    background-color: white;
+    border: 2px double black;
+    width: 40%;
+}
+td{
+    border: 2px double black;
+    padding: 5px;
+    font-size: 250%;
+    font-family: cursive;
+    font-weight: bolder;
 }

@@ -16,30 +16,27 @@ h4{
 .bigcontainer{
     display: flex;
     flex-direction: column;
+    font-size: xx-large;
+    font-family: cursive;
+    font-weight: bolder;
+    background-color: bisque;
+    margin-bottom: 20px;
 }
 .maincontainer{
-    background-color: bisque;
-    font-size: 200%;
-    font-family: cursive;
-    font-weight: bolder;
     text-align: center;
+    font-weight: bolder; 
 }
-.container2{
+.footcontainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: bisque;
-    font-size: 200%;
-    font-family: cursive;
-    font-weight: bolder;
-    text-align: center;
-    border-top: 4px double black;
+    justify-content: space-between; 
+    border-top: 4px double black;  
 }
 a{
     text-decoration: none;
-    color:brown;
+    color: brown;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .container{
     width: 100%;
