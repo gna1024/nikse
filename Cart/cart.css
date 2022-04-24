@@ -1,0 +1,28 @@
+body{
+    background-color: whitesmoke;
+}
+.bigcontainer{
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    font-family: cursive;
+    font-weight: bolder;
+    background-color: bisque;
+    margin-bottom: 20px;
+}
+.maincontainer{
+    text-align: center;
+    font-weight: bolder; 
+}
+.footcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    border-top: 4px double black;  
+}
+a{
+    text-decoration: none;
+    color: brown;
+    padding-left: 15px;
+    padding-right: 15px;
+}

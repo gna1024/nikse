@@ -1,0 +1,55 @@
+body{
+    background-color: whitesmoke;
+}
+.bigcontainer{
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    font-family: cursive;
+    font-weight: bolder;
+    background-color: bisque;
+    margin-bottom: 20px;
+}
+.maincontainer{
+    text-align: center;
+    font-weight: bolder; 
+}
+.footcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    border-top: 4px double black;  
+}
+a{
+    text-decoration: none;
+    color: brown;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.review{
+    background-color: bisque;
+    border: 3px solid black;
+    padding: 0.25%;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+img{
+    width: 10%;
+}
+.text{
+    padding: 0.25%;
+    font-size: x-large;
+    font-weight: bold;
+}
+.main{
+    border: 3px solid black;
+    padding: 0.25%;
+}
