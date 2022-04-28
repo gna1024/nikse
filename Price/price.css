@@ -1,6 +1,38 @@
 body{
     background-color: whitesmoke;
 }
+#main{
+    background-color: bisque;
+    width: 100%;
+    font-size: 200%;
+    font-family: cursive;
+    font-weight: bolder;
+    padding: 3px;
+}
+#head{
+    text-align: center;
+    border-bottom: 2px double black;
+}
+#foot{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.element{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+a{
+    text-decoration: none;
+    color: rgb(194, 8, 8);
+}
+#headlink{
+    color:black;
+}
+caption{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 h1{
     font-family: cursive;
     font-weight: bolder;
@@ -12,46 +44,22 @@ h4{
     font-weight: normal;
     font-size: 140%;
     line-height: 150%;
-    width: 64%;
+    width: 100%
 }
-img{
-    width: 35%;
+@media(min-width: 600px){
+    img{
+        width: 40%;
+    }
 }
-.bigcontainer{
-    display: flex;
-    flex-direction: column;
-    font-size: xx-large;
-    font-family: cursive;
-    font-weight: bolder;
-    background-color: bisque;
-    margin-bottom: 20px;
-}
-.maincontainer{
-    text-align: center;
-    font-weight: bolder; 
-}
-.footcontainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-    border-top: 4px double black;  
-}
-.container{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+@media(max-width: 599px){
+    img{
+        width: 100%;
+    }
 }
 .quotes{
     margin-left: 10px;
     padding-left: 5px;
     border-left: 4px double red;
-}
-a{
-    text-decoration: none;
-    color: brown;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 table{
     width: 100%;
