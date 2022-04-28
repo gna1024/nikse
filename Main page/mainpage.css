@@ -1,33 +1,33 @@
-body {
-    background: url(coffee.jpeg);
-    background-position:center center;
-    background-repeat:no-repeat;
+body{
+    background-image: url(coffee.jpeg);
+    background-position: center center;
+    background-repeat: repeat;
     background-attachment: fixed;
-    background-size:cover;
-    background-color: rgb(131, 63, 14);
+    background-size: cover;
 }
-.bigcontainer{
-    display: flex;
-    flex-direction: column;
-    font-size: xx-large;
+#main{
+    background-color: bisque;
+    width: 100%;
     font-family: cursive;
     font-weight: bolder;
-    background-color: bisque;
-    margin-bottom: 20px;
+    padding: 3px;
 }
-.maincontainer{
+#head{
     text-align: center;
-    font-weight: bolder; 
+    font-size: 250%;
+    border-bottom: 2px solid black;
 }
-.footcontainer{
+#foot{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-    border-top: 4px double black;  
+    flex-flow: row wrap;
+    justify-content: space-around;
+    font-size: 250%;
+}
+.element{
+    margin-right: 30px;
+    margin-left: 30px;
 }
 a{
     text-decoration: none;
-    color: brown;
-    padding-left: 15px;
-    padding-right: 15px;
+    color: black;
 }
