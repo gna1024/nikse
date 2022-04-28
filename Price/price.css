@@ -1,5 +1,7 @@
 body{
     background-color: whitesmoke;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 #main{
     background-color: bisque;
@@ -46,15 +48,8 @@ h4{
     line-height: 150%;
     width: 100%
 }
-@media(min-width: 600px){
-    img{
-        width: 40%;
-    }
-}
-@media(max-width: 599px){
-    img{
-        width: 100%;
-    }
+img{
+    width: 50%;
 }
 .quotes{
     margin-left: 10px;
