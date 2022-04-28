@@ -8,20 +8,19 @@ body{
 #main{
     background-color: bisque;
     width: 100%;
+    font-size: 200%;
     font-family: cursive;
     font-weight: bolder;
     padding: 3px;
 }
 #head{
     text-align: center;
-    font-size: 250%;
-    border-bottom: 2px solid black;
+    border-bottom: 2px double black;
 }
 #foot{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    font-size: 250%;
 }
 .element{
     margin-right: 30px;
@@ -29,5 +28,8 @@ body{
 }
 a{
     text-decoration: none;
-    color: black;
+    color: rgb(194, 8, 8);
+}
+#headlink{
+    color:black;
 }
