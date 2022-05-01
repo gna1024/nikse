@@ -33,17 +33,25 @@
             </div>
         </header>
         <h1 style="text-align: center">Reviews</h1>
-        <div class="container">
-            <div class="review">
-                <div class="head">
-                    <div>
-                        <img src="icon.jpeg" alt="photo">
+        <a href="add">Add review</a>
+        <p></p>
+        <div class = "container">
+            {% for review in reviews %}
+                <div class="review">
+                    <div class="head">
+                        <div class="text">Nikita</div>
+                        <div class="text">24.04.2022</div>
                     </div>
-                    <div class="text">Nikita</div>
-                    <div class="text">24.04.2022</div>
+                    <div class="main">{{review}}</div>
                 </div>
-                <div class="main">Great! The best coffee bar!</div>
+            {% endfor %}
+        </div>
+        <div class="review">
+            <div class="head">
+                <div class="text">Nikita</div>
+                <div class="text">24.04.2022</div>
             </div>
+            <div class="main">Great! The best coffee bar!</div>
         </div>
     </body>
 </html>

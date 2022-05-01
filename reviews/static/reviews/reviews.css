@@ -32,18 +32,19 @@ a{
 }
 .container{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content:space-between;
 }
 .review{
     background-color: bisque;
     border: 3px solid black;
     padding: 0.25%;
+    margin-bottom: 25px
 }
 .head{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 img{
     width: 10%;
