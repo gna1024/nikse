@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Nikse coffee bar
+        </title>
+        <link rel="shortcut icon" href="{% static 'cart/icon.jpeg' %}">
+        <link rel="stylesheet" href="{% static 'cart/cart.css' %}">
+    </head>
+    <body>
+        <header>
+            <div id="main">
+                <div id="head"><a href="/" id="headlink">Nikse coffee bar</a></div>
+                <div id="foot">
+                    <div class="element">
+                        <a href="/aboutcoffee">About coffee</a>
+                    </div>
+                    <div class="element">
+                        <a href="/price">Price</a>
+                    </div>
+                    <div class="element">
+                        <a href="/orderahead">Order ahead</a>
+                    </div>
+                    <div class="element">
+                        <a href="/reviews">Reviews</a>
+                    </div>
+                    <div class="element">
+                        <a href="/aboutus">About us</a>
+                    </div>
+                </div>
+            </div>
+            {% if len == 0 %}
+                <h1 id="no1">Yout cart is empty</h1>
+                <h2 id="no2"><a href="/orderahead">Do your order</a></h2>         
+            {% endif %}
+            <div class="cards">
+                {% for item in order %}
+                    <div class="card">
+                        {% if item == "espresso" %}
+                            <div><img src="{% static 'orderahead/espresso.jpeg' %}" alt="{{item}}"></div>
+                            <div class="text">Espresso</div>
+                            <div class="price">1.1$</div> 
+                        {% endif %}
+                        {% if item == "doppio" %}
+                            <div><img src="{% static 'orderahead/doppio.jpeg' %}" alt="{{item}}"></div>
+                            <div class="text">Doppio</div>
+                            <div class="price">1.25$</div> 
+                        {% endif %}
+                        {% if item == "americano" %}
+                            <div><img src="{% static 'orderahead/americano.jpeg' %}" alt="{{item}}"></div>
+                            <div class="text">Americano</div>
+                            <div class="price">1.25$</div> 
+                        {% endif %}
+                        {% if item == "lattemacchiato" %}
+                            <div><img src="{% static 'orderahead/lattemacchiato.jpeg' %}" alt="{{item}}"></div>
+                            <div class="text">Latte Macchiato</div>
+                            <div class="price">1.7$</div> 
+                        {% endif %}
+                        {% if item == "caramelmacchiato" %}
+                            <div><img src="{% static 'orderahead/caramelmacchiato.jpeg' %}" alt="{{item}}"></div>
+                            <div class="text">Caramel Macchiato</div>
+                            <div class="price">1.9$</div> 
+                        {% endif %}
+                        {% if item == "latte" %}
+                            <div><img src="{% static 'orderahead/latte.jpeg' %}" alt="{{item}}"></div>
+                            <div class="text">Latte</div>
+                            <div class="price">2.1$</div> 
+                        {% endif %}
+                        {% if item == "icedlatte" %}
+                            <div><img src="{% static 'orderahead/icedlatte.jpeg' %}" alt="{{item}}"></div>
+                            <div class="text">Iced Latte</div>
+                            <div class="price">2.25$</div> 
+                        {% endif %}
+                        {% if item == "cappuccino" %}
+                            <div><img src="{% static 'orderahead/cappuccino.jpeg' %}" alt="{{item}}"></div>
+                            <div class="text">Cappuccino</div>
+                            <div class="price">2.15$</div> 
+                        {% endif %}
+                        {% if item == "flatwhite" %}
+                            <div><img src="{% static 'orderahead/cappuccino.jpeg' %}" alt="{{item}}"></div>
+                            <div class="text">Flat White</div>
+                            <div class="price">1.8$</div> 
+                        {% endif %}
+                        {% if item == "irishcoffee" %}
+                            <div><img src="{% static 'orderahead/irishcoffee.jpeg' %}" alt="{{item}}"></div>
+                            <div class="text">Irish Coffee</div>
+                            <div class="price">2.5$</div> 
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </header>
+    </body>
+</html>

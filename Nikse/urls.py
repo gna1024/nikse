@@ -20,8 +20,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('orderahead/', include("orderahead.urls")),
     path('', include("mainpage.urls")),
-    path('aboutcoffee', include("aboutcoffee.urls")),
-    path('price', include("price.urls")),
-    path('reviews', include("reviews.urls")),
-    path('aboutus', include("aboutus.urls"))
+    path('aboutcoffee/', include("aboutcoffee.urls")),
+    path('price/', include("price.urls")),
+    path('reviews/', include("reviews.urls")),
+    path('aboutus/', include("aboutus.urls"))
 ]

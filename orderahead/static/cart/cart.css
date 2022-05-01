@@ -1,0 +1,76 @@
+body{
+    background-color: whitesmoke;
+}
+#main{
+    background-color: bisque;
+    width: 100%;
+    font-size: 200%;
+    font-family: cursive;
+    font-weight: bolder;
+    padding: 3px;
+}
+#head{
+    text-align: center;
+    border-bottom: 2px double black;
+}
+#foot{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.element{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+a{
+    text-decoration: none;
+    color: rgb(194, 8, 8);
+}
+#headlink{
+    color:black;
+}
+.cards{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.card{
+    background-color: bisque;
+    width: 30%;
+    border: 2px solid black;
+    padding: 1%;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+img{
+    max-width: 100%;
+    max-height: auto;
+    display: block;
+}
+.text{
+    text-align: center;
+    font-family: cursive;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.price{
+    text-align: center;
+    font-family: cursive;
+    font-size: x-large;
+    font-weight: bold;
+}
+#no1{
+    text-align: center;
+    font-size: 400%;
+    font-weight: bold;
+}
+#no2{
+    text-align: center;
+    font-size: 500%;
+    font-family: cursive;
+    font-weight: bolder;
+    color: red;
+    text-decoration: underline;   
+}
