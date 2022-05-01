@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Nikse coffee bar
+        </title>
+        <link rel="shortcut icon" href="{% static 'reviews/icon.jpeg' %}">
+        <link rel="stylesheet" href="{% static 'reviews/reviews.css' %}">
+    </head>
+    <body>
+        <header>
+            <div id="main">
+                <div id="head"><a href="/" id="headlink">Nikse coffee bar</a></div>
+                <div id="foot">
+                    <div class="element">
+                        <a href="/aboutcoffee">About coffee</a>
+                    </div>
+                    <div class="element">
+                        <a href="/price">Price</a>
+                    </div>
+                    <div class="element">
+                        <a href="/orderahead">Order ahead</a>
+                    </div>
+                    <div class="element">
+                        <a href="/reviews">Reviews</a>
+                    </div>
+                    <div class="element">
+                        <a href="/aboutus">About us</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <h1 style="text-align: center">Reviews</h1>
+        <div class="container">
+            <div class="review">
+                <div class="head">
+                    <div>
+                        <img src="icon.jpeg" alt="photo">
+                    </div>
+                    <div class="text">Nikita</div>
+                    <div class="text">24.04.2022</div>
+                </div>
+                <div class="main">Great! The best coffee bar!</div>
+            </div>
+        </div>
+    </body>
+</html>

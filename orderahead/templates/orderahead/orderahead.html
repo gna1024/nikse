@@ -1,0 +1,178 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Nikse coffee bar
+        </title>
+        <link rel="shortcut icon" href="{% static 'orderahead/cart.jpeg' %}">
+        <link rel="stylesheet" href="{% static 'orderahead/orderahead.css' %}">
+    </head>
+    <body>
+        <header>
+            <div id="main">
+                <div id="head"><a href="/" id="headlink">Nikse coffee bar</a></div>
+                <div id="foot">
+                    <div class="element">
+                        <a href="/aboutcoffee">About coffee</a>
+                    </div>
+                    <div class="element">
+                        <a href="/price">Price</a>
+                    </div>
+                    <div class="element">
+                        <a href="/orderahead">Order ahead</a>
+                    </div>
+                    <div class="element">
+                        <a href="/reviews">Reviews</a>
+                    </div>
+                    <div class="element">
+                        <a href="/aboutus">About us</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="cards">
+            <div class="card">
+                <div><img src="{% static 'orderahead/espresso.jpeg' %}" alt="Espresso"></div>
+                <div class="text">Espresso</div>
+                <div class="price">1.1$</div>
+                <a href="#popup1">
+                    <div class="text">
+                        Order
+                    </div>
+                </a>   
+            </div>
+            <div class="card">
+                <div><img src="{% static 'orderahead/doppio.jpeg' %}" alt="Doppio"></div>
+                <div class="text">Doppio</div>
+                <div class="price">1.25$</div>
+                <a href="#popup2">
+                    <div class="text">
+                        Order
+                    </div>
+                </a>  
+            </div>
+            <div class="card">
+                <div><img src="{% static 'orderahead/americano.jpeg' %}" alt="Americano"></div>
+                <div class="text">Americano</div>
+                <div class="price">1.25$</div>
+                <a href="#popup3">
+                    <div class="text">
+                        Order
+                    </div>
+                </a>  
+            </div>
+            <div class="card">
+                <div><img src="{% static 'orderahead/lattemacchiato.jpeg' %}" alt="Latte Macchiato"></div>
+                <div class="text">Latte Macchiato</div>
+                <div class="price">1.7$</div>
+                <a href="#popup4">
+                    <div class="text">
+                        Order
+                    </div>
+                </a>  
+            </div>
+            <div class="card">
+                <div><img src="{% static 'orderahead/caramelmacchiato.jpeg' %}" alt="Caramel Macchiato"></div>
+                <div class="text">Caramel Macchiato</div>
+                <div class="price">1.9$</div>
+                <a href="#popup5">
+                    <div class="text">
+                        Order
+                    </div>
+                </a>  
+            </div>
+            <div class="card">
+                <div><img src="{% static 'orderahead/latte.jpeg' %}" alt="Latte"></div>
+                <div class="text">Latte</div>
+                <div class="price">2.1$</div>
+                <a href="#popup6">
+                    <div class="text">
+                        Order
+                    </div>
+                </a>  
+            </div>
+            <div class="card">
+                <div><img src="{% static 'orderahead/icedlatte.jpeg' %}" alt="Iced Latte"></div>
+                <div class="text">Iced Latte</div>
+                <div class="price">2.25$</div>
+                <a href="#popup7">
+                    <div class="text">
+                        Order
+                    </div>
+                </a>  
+            </div>
+            <div class="card">
+                <div><img src="{% static 'orderahead/cappuccino.jpeg' %}" alt="Cappuccino"></div>
+                <div class="text">Cappuccino</div>
+                <div class="price">2.15$</div>
+                <a href="#popup8">
+                    <div class="text">
+                        Order
+                    </div>
+                </a>  
+            </div>
+            <div class="card">
+                <div><img src="{% static 'orderahead/flatwhite.jpeg' %}" alt="Flat White"></div>
+                <div class="text">Flat White</div>
+                <div class="price">1.8$</div>
+                <a href="#popup9">
+                    <div class="text">
+                        Order
+                    </div>
+                </a>  
+            </div>
+            <div class="card">
+                <div><img src="{% static 'orderahead/irishcoffee.jpeg' %}" alt="Irish Coffee"></div>
+                <div class="text">Irish Coffee</div>
+                <div class="price">2.5$</div>
+                <a href="#popup10">
+                    <div class="text">
+                        Order
+                    </div>
+                </a>  
+            </div>
+        </div>
+        <div id="popup1" class="popup">
+            <a href="##" class="popup_close">x</a>
+            <div class="popup_text">Espresso added to your<a href="../Cart/cart.html">cart</a></div>
+        </div>
+        <div id="popup2" class="popup">
+            <a href="##" class="popup_close">x</a>
+            <div class="popup_text">Doppio added to your<a href="../Cart/cart.html">cart</a></div>
+        </div>
+        <div id="popup3" class="popup">
+            <a href="##" class="popup_close">x</a>
+            <div class="popup_text">Americano added to your<a href="../Cart/cart.html">cart</a></div>
+        </div>
+        <div id="popup4" class="popup">
+            <a href="##" class="popup_close">x</a>
+            <div class="popup_text">Latte Macchiato added to your<a href="../Cart/cart.html">cart</a></div>
+        </div>
+        <div id="popup5" class="popup">
+            <a href="##" class="popup_close">x</a>
+            <div class="popup_text">Caramel Macchiato added to your<a href="../Cart/cart.html">cart</a></div>
+        </div>
+        <div id="popup6" class="popup">
+            <a href="##" class="popup_close">x</a>
+            <div class="popup_text">Latte added to your<a href="../Cart/cart.html">cart</a></div>
+        </div>
+        <div id="popup7" class="popup">
+            <a href="##" class="popup_close">x</a>
+            <div class="popup_text">Iced Latte added to your<a href="../Cart/cart.html">cart</a></div>
+        </div>
+        <div id="popup8" class="popup">
+            <a href="##" class="popup_close">x</a>
+            <div class="popup_text">Cappuccino added to your<a href="../Cart/cart.html">cart</a></div>
+        </div>
+        <div id="popup9" class="popup">
+            <a href="##" class="popup_close">x</a>
+            <div class="popup_text">Flat White added to your<a href="../Cart/cart.html">cart</a></div>
+        </div>
+        <div id="popup10" class="popup">
+            <a href="##" class="popup_close">x</a>
+            <div class="popup_text">Irish Coffee added to your<a href="../Cart/cart.html">cart</a></div>
+        </div>
+    </body>
+</html>
