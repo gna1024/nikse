@@ -41,7 +41,7 @@
                         {% if item == "espresso" %}
                             <div><img src="{% static 'orderahead/espresso.jpeg' %}" alt="{{item}}"></div>
                             <div class="text">Espresso</div>
-                            <div class="price">1.1$</div> 
+                            <div class="price">1.1$</div>
                         {% endif %}
                         {% if item == "doppio" %}
                             <div><img src="{% static 'orderahead/doppio.jpeg' %}" alt="{{item}}"></div>
@@ -90,6 +90,12 @@
                         {% endif %}
                     </div>
                 {% endfor %}
+                {% if len != 0 %}
+                    <form action="{% url 'cart'%}"  method="post">
+                        {% csrf_token %}
+                        <input type="submit" value="Delete all" name="del" id="del">
+                    </form>
+                {% endif %}
             </div>
         </header>
     </body>

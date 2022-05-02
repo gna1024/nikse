@@ -32,106 +32,97 @@
                 </div>
             </div>
         </header>
+        <h1><a href="cart">Go to your cart</a></h1>
         <div class="cards">
             <div class="card">
                 <div><img src="{% static 'orderahead/espresso.jpeg' %}" alt="Espresso"></div>
                 <div class="text">Espresso</div>
                 <div class="price">1.1$</div>
-                <form>
-                    <button formaction="{% order.append('espresso') %}">
-                        Order
-                    </button>
+                <form action="{% url 'orderahead'%}"  method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Order" name="espresso">
                 </form>
             </div>
             <div class="card">
                 <div><img src="{% static 'orderahead/doppio.jpeg' %}" alt="Doppio"></div>
                 <div class="text">Doppio</div>
                 <div class="price">1.25$</div>
-                <a href="#popup2">
-                    <div class="text">
-                        Order
-                    </div>
-                </a>  
+                <form action="{% url 'orderahead'%}"  method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Order" name="doppio">
+                </form> 
             </div>
             <div class="card">
                 <div><img src="{% static 'orderahead/americano.jpeg' %}" alt="Americano"></div>
                 <div class="text">Americano</div>
                 <div class="price">1.25$</div>
-                <a href="#popup3">
-                    <div class="text">
-                        Order
-                    </div>
-                </a>  
+                <form action="{% url 'orderahead'%}"  method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Order" name="americano">
+                </form> 
             </div>
             <div class="card">
                 <div><img src="{% static 'orderahead/lattemacchiato.jpeg' %}" alt="Latte Macchiato"></div>
                 <div class="text">Latte Macchiato</div>
                 <div class="price">1.7$</div>
-                <a href="#popup4">
-                    <div class="text">
-                        Order
-                    </div>
-                </a>  
+                <form action="{% url 'orderahead'%}"  method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Order" name="lattemacchiato">
+                </form> 
             </div>
             <div class="card">
                 <div><img src="{% static 'orderahead/caramelmacchiato.jpeg' %}" alt="Caramel Macchiato"></div>
                 <div class="text">Caramel Macchiato</div>
                 <div class="price">1.9$</div>
-                <a href="#popup5">
-                    <div class="text">
-                        Order
-                    </div>
-                </a>  
+                <form action="{% url 'orderahead'%}"  method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Order" name="caramelmacchiato">
+                </form>  
             </div>
             <div class="card">
                 <div><img src="{% static 'orderahead/latte.jpeg' %}" alt="Latte"></div>
                 <div class="text">Latte</div>
                 <div class="price">2.1$</div>
-                <a href="#popup6">
-                    <div class="text">
-                        Order
-                    </div>
-                </a>  
+                <form action="{% url 'orderahead'%}"  method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Order" name="latte">
+                </form> 
             </div>
             <div class="card">
                 <div><img src="{% static 'orderahead/icedlatte.jpeg' %}" alt="Iced Latte"></div>
                 <div class="text">Iced Latte</div>
                 <div class="price">2.25$</div>
-                <a href="#popup7">
-                    <div class="text">
-                        Order
-                    </div>
-                </a>  
+                <form action="{% url 'orderahead'%}"  method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Order" name="icedlatte">
+                </form> 
             </div>
             <div class="card">
                 <div><img src="{% static 'orderahead/cappuccino.jpeg' %}" alt="Cappuccino"></div>
                 <div class="text">Cappuccino</div>
                 <div class="price">2.15$</div>
-                <a href="#popup8">
-                    <div class="text">
-                        Order
-                    </div>
-                </a>  
+                <form action="{% url 'orderahead'%}"  method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Order" name="cappuccino">
+                </form> 
             </div>
             <div class="card">
                 <div><img src="{% static 'orderahead/flatwhite.jpeg' %}" alt="Flat White"></div>
                 <div class="text">Flat White</div>
                 <div class="price">1.8$</div>
-                <a href="#popup9">
-                    <div class="text">
-                        Order
-                    </div>
-                </a>  
+                <form action="{% url 'orderahead'%}"  method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Order" name="flatwhite">
+                </form> 
             </div>
             <div class="card">
                 <div><img src="{% static 'orderahead/irishcoffee.jpeg' %}" alt="Irish Coffee"></div>
                 <div class="text">Irish Coffee</div>
                 <div class="price">2.5$</div>
-                <a href="#popup10">
-                    <div class="text">
-                        Order
-                    </div>
-                </a>  
+                <form action="{% url 'orderahead'%}"  method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Order" name="irishcoffee">
+                </form>
             </div>
         </div>
         <div id="popup1" class="popup">
