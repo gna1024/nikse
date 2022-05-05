@@ -36,7 +36,7 @@
         <div class="cards">
             {% for item in order %}
                 <div class="card">
-                    <div><img src="{{ item.img }}" alt="{{ item.name }}"></div>
+                    <div><img src="{{ item.img.url }}" alt="{{ item.name }}"></div>
                     <div class="text">{{ item.name }}</div>
                     <div class="price">{{ item.price }}</div>
                     <form action="{% url 'orderahead'%}"  method="post">
