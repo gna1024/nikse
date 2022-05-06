@@ -41,7 +41,7 @@
                     <div class="price">{{ item.price }}</div>
                     <form action="{% url 'orderahead'%}"  method="post">
                         {% csrf_token %}
-                        <input type="submit" value="Order" name="{{item.name}}">
+                        <input type="submit" value="Order" name="{{ item.name }}">
                     </form>
                 </div>
             {% endfor %}   

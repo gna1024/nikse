@@ -38,64 +38,17 @@
             <div class="cards">
                 {% for item in order %}
                     <div class="card">
-                        {% if item == "espresso" %}
-                            <div><img src="{% static 'orderahead/espresso.jpeg' %}" alt="{{item}}"></div>
-                            <div class="text">Espresso</div>
-                            <div class="price">1.1$</div>
-                        {% endif %}
-                        {% if item == "doppio" %}
-                            <div><img src="{% static 'orderahead/doppio.jpeg' %}" alt="{{item}}"></div>
-                            <div class="text">Doppio</div>
-                            <div class="price">1.25$</div> 
-                        {% endif %}
-                        {% if item == "americano" %}
-                            <div><img src="{% static 'orderahead/americano.jpeg' %}" alt="{{item}}"></div>
-                            <div class="text">Americano</div>
-                            <div class="price">1.25$</div> 
-                        {% endif %}
-                        {% if item == "lattemacchiato" %}
-                            <div><img src="{% static 'orderahead/lattemacchiato.jpeg' %}" alt="{{item}}"></div>
-                            <div class="text">Latte Macchiato</div>
-                            <div class="price">1.7$</div> 
-                        {% endif %}
-                        {% if item == "caramelmacchiato" %}
-                            <div><img src="{% static 'orderahead/caramelmacchiato.jpeg' %}" alt="{{item}}"></div>
-                            <div class="text">Caramel Macchiato</div>
-                            <div class="price">1.9$</div> 
-                        {% endif %}
-                        {% if item == "latte" %}
-                            <div><img src="{% static 'orderahead/latte.jpeg' %}" alt="{{item}}"></div>
-                            <div class="text">Latte</div>
-                            <div class="price">2.1$</div> 
-                        {% endif %}
-                        {% if item == "icedlatte" %}
-                            <div><img src="{% static 'orderahead/icedlatte.jpeg' %}" alt="{{item}}"></div>
-                            <div class="text">Iced Latte</div>
-                            <div class="price">2.25$</div> 
-                        {% endif %}
-                        {% if item == "cappuccino" %}
-                            <div><img src="{% static 'orderahead/cappuccino.jpeg' %}" alt="{{item}}"></div>
-                            <div class="text">Cappuccino</div>
-                            <div class="price">2.15$</div> 
-                        {% endif %}
-                        {% if item == "flatwhite" %}
-                            <div><img src="{% static 'orderahead/cappuccino.jpeg' %}" alt="{{item}}"></div>
-                            <div class="text">Flat White</div>
-                            <div class="price">1.8$</div> 
-                        {% endif %}
-                        {% if item == "irishcoffee" %}
-                            <div><img src="{% static 'orderahead/irishcoffee.jpeg' %}" alt="{{item}}"></div>
-                            <div class="text">Irish Coffee</div>
-                            <div class="price">2.5$</div> 
-                        {% endif %}
+                        <div><img src="{{ item.img.url }}" alt="{{item.name}}"></div>
+                        <div class="text">{{ item.name }}</div>
+                        <div class="price">{{ item.price }}$</div>   
+                        <div class="del">
+                            <form action="{% url 'cart'%}"  method="post">
+                                {% csrf_token %}
+                                <input type="submit" value="Delete" name="del">
+                            </form>
+                        </div>               
                     </div>
                 {% endfor %}
-                {% if len != 0 %}
-                    <form action="{% url 'cart'%}"  method="post">
-                        {% csrf_token %}
-                        <input type="submit" value="Delete all" name="del" id="del">
-                    </form>
-                {% endif %}
             </div>
         </header>
     </body>

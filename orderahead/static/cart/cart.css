@@ -74,8 +74,7 @@ img{
     color: red;
     text-decoration: underline;   
 }
-#del{
-    font-size: 200%;
-    font-weight: bold;
-    margin: 15px;
+.del{
+    font-size: 150%;
+    text-align: center;
 }

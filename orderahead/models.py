@@ -6,3 +6,8 @@ class Order(models.Model):
     img = models.ImageField()
     name = models.CharField(max_length=64)
     price = models.FloatField()
+
+class Cart(models.Model):
+    img = models.ImageField()
+    name = models.CharField(max_length=64)
+    price = models.FloatField()
