@@ -2,8 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django import forms
 import datetime
-
-reviewss = []
+from .models import Review
 
 class AddReview(forms.Form):
     name = forms.CharField(label = "Name", min_length = 1, max_length = 100)
@@ -13,7 +12,7 @@ class AddReview(forms.Form):
 
 def reviews(request):
     return render(request, "reviews/reviews.html", {
-        "reviews": reviewss
+        "reviews": Review.objects.all()
     })
 
 def add(request):
@@ -21,8 +20,9 @@ def add(request):
         form = AddReview(request.POST)
         if form.is_valid():
             now = datetime.datetime.now()
-            review = (form.cleaned_data["name"],form.cleaned_data["review"], now.strftime("%d-%m-%y"))
-            reviewss.append(review)
+            now.strftime("%d-%m-%y")
+            review_ = Review(name = form.cleaned_data["name"], review = form.cleaned_data["review"], date = now)
+            review_.save()
             return HttpResponseRedirect("/reviews")
         else: 
             return render(request, "reviews/add.html",{

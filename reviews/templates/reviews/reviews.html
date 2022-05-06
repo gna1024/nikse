@@ -39,10 +39,10 @@
             {% for review in reviews %}
                 <div class="review">
                     <div class="head">
-                        <div class="text">{{ review.0 }}</div>
-                        <div class="text">{{ review.2}}</div>
+                        <div class="text">{{ review.name }}</div>
+                        <div class="text">{{ review.date }}</div>
                     </div>
-                    <div class="main">{{ review.1 }}</div>
+                    <div class="main">{{ review.review }}</div>
                 </div>
             {% endfor %}
         </div>
