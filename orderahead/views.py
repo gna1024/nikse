@@ -70,16 +70,30 @@ def coffee(request):
             else:
                 cart = Cart(img = "Irishcoffee.jpeg" , name = "Irish Coffee", price ="2.5")
                 cart.save()   
-    return render(request, "orderahead/orderahead.html", {
-        "order": Order.objects.all()
-    })
-    
+    if request.user.is_authenticated:
+        return render(request, 'orderahead/orderahead.html',{
+            "message": 'logout',
+            "order": Order.objects.all()
+        })
+    else:
+        return render(request, 'orderahead/orderahead.html',{
+            "message": 'login',
+            "order": Order.objects.all()
+        })    
 
 def cart(request):
     if request.method =="POST":
         if request.POST.get('del'):
             Cart.objects.all().delete()
-    return render(request, 'cart/cart.html', {
-        "order": Cart.objects.all(),
-        "len": Cart.objects.count()
-    })
+    if request.user.is_authenticated:
+        return render(request, 'cart/cart.html',{
+            "message": 'logout',
+            "order": Cart.objects.all(),
+            "len": Cart.objects.count()
+        })
+    else:
+        return render(request, 'cart/cart.html',{
+            "message": 'login',
+            "order": Cart.objects.all(),
+            "len": Cart.objects.count()
+        })

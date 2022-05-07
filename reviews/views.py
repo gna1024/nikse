@@ -11,9 +11,16 @@ class AddReview(forms.Form):
 # Create your views here.
 
 def reviews(request):
-    return render(request, "reviews/reviews.html", {
-        "reviews": Review.objects.all()
-    })
+    if request.user.is_authenticated:
+        return render(request, 'reviews/reviews.html',{
+            "message": 'logout',
+            "reviews": Review.objects.all()
+        })
+    else:
+        return render(request, 'reviews.html',{
+            "message": 'login',
+            "reviews": Review.objects.all()
+        })
 
 def add(request):
     if request.method =="POST":
