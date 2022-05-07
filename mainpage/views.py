@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect
 def main(request):
     return render(request, 'mainpage/mainpage.html')
 
-def login(request):
+def login_view(request):
     if request.method == "POST":
         username = request.POST["username"]
         password = request.POST["password"]
@@ -21,5 +21,8 @@ def login(request):
             })
     return render(request, 'mainpage/login.html')
 
-def logout(request):
-    return render(request, 'mainpage/login.html')
+def logout_view(request):
+    logout(request)
+    return render(request, 'mainpage/login.html', {
+                "message": 'Logged out.'
+            })
