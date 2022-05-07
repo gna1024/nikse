@@ -39,7 +39,9 @@
         <form action = "{% url 'login' %}", method="post">
             {% csrf_token %}
             <input type="text" name="username" placeholder="Username">
-            <input type="password" name="password">
+            <p></p>
+            <input type="password" name="password" placeholder="Password">
+            <p></p>
             <input type="submit" value="Login" >
         </form>
     </body>

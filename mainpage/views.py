@@ -5,7 +5,14 @@ from django.http import HttpResponseRedirect
 # Create your views here.
 
 def main(request):
-    return render(request, 'mainpage/mainpage.html')
+    if request.user.is_authenticated:
+        return render(request, 'mainpage/mainpage.html',{
+            "message": 'logout'
+        })
+    else:
+        return render(request, 'mainpage/mainpage.html',{
+            "message": 'login'
+        })
 
 def login_view(request):
     if request.method == "POST":
@@ -23,6 +30,4 @@ def login_view(request):
 
 def logout_view(request):
     logout(request)
-    return render(request, 'mainpage/login.html', {
-                "message": 'Logged out.'
-            })
+    return HttpResponseRedirect(reverse("main"))
