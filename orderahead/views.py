@@ -47,8 +47,9 @@ def coffee(request):
 
 def cart(request):
     if request.method =="POST":
-        if 'del' in request.POST:
+        if request.POST.get('del'):
             Cart.objects.all().delete()
     return render(request, 'cart/cart.html', {
-        "order": Cart.objects.all()
+        "order": Cart.objects.all(),
+        "len": Cart.objects.count()
     })
