@@ -18,6 +18,12 @@ body{
     flex-flow: row wrap;
     justify-content: space-around;
 }
+#foot1{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    border-bottom: 2px double black;
+}
 .element{
     margin-right: 30px;
     margin-left: 30px;

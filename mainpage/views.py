@@ -3,7 +3,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse
 from django.http import HttpResponseRedirect
+from .forms import RegistrForm
 # Create your views here.
+
 
 def main(request):
     if request.user.is_authenticated:
@@ -36,13 +38,13 @@ def logout_view(request):
 def register(request):
     data = {}
     if request.method == "POST":
-        form = UserCreationForm(request.POST)
+        form = RegistrForm(request.POST)
         if form.is_valid():
             form.save()
             data['form'] = form
             data['res'] = "Hi!"
             return render(request, "mainpage/login.html", data)
     else:
-        form = UserCreationForm()
+        form = RegistrForm()
         data['form'] = form
     return render(request, "mainpage/register.html", data)
