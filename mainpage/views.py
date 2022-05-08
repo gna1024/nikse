@@ -44,6 +44,8 @@ def register(request):
             data['form'] = form
             data['res'] = "Hi!"
             return render(request, "mainpage/login.html", data)
+        else:
+            return HttpResponseRedirect(reverse("register"))
     else:
         form = RegistrForm()
         data['form'] = form
