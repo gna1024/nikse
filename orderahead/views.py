@@ -4,8 +4,6 @@ from django.http import HttpResponseRedirect
 from requests import delete
 from .models import Order, Cart
 
-x = 0
-
 # Create your views here.
 
 def coffee(request):
