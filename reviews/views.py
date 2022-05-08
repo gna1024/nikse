@@ -17,7 +17,7 @@ def reviews(request):
             "reviews": Review.objects.all()
         })
     else:
-        return render(request, 'reviews.html',{
+        return render(request, 'reviews/reviews.html',{
             "message": 'login',
             "reviews": Review.objects.all()
         })
