@@ -26,7 +26,8 @@ urlpatterns = [
     path('aboutcoffee/', include("aboutcoffee.urls")),
     path('price/', include("price.urls")),
     path('reviews/', include("reviews.urls")),
-    path('aboutus/', include("aboutus.urls"))
+    path('aboutus/', include("aboutus.urls")),
+    path('game', include("game.urls"))
 ]
 
 if settings.DEBUG:
