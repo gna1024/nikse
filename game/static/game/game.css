@@ -9,3 +9,11 @@ form{
     width: 100%;
     text-align: center;
 }
+#name{
+    width: 20%;
+    font-size: 150%;
+    text-align: center;
+}
+#submit{
+    font-size: 170%;
+}

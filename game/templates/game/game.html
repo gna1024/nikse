@@ -7,21 +7,14 @@
             Secret game
         </title>
         <link rel="stylesheet" href="{% static 'game/game.css' %}">
-        <script>
-            document.addEventListener('DOMContentLoaded', function(){
-                document.querySelector('form').onsubmit = function(){
-                    const name = document.querySelector('#name').value;
-                    alert(`Hi, ${name}. You find my secret game. If you'll pass all levels`)
-                }
-            })
-        </script>
+        <script src="game.js"></script>
     </head>
     <body>
         <form>
             <h1>What's your name?</h1>
             <input type="text" id="name" placeholder="Name">
             <p></p>
-            <input type="submit" name="Start"> 
+            <input type="submit" id="submit" value="Start game"> 
         </form>
     </body>
 </html>
