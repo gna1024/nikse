@@ -8,6 +8,12 @@
         </title>
         <link rel="shortcut icon" href="{% static 'orderahead/cart.jpeg' %}">
         <link rel="stylesheet" href="{% static 'orderahead/orderahead.css' %}">
+        <style>
+            #game{
+                position: relative;
+                cursor: pointer;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -45,7 +51,28 @@
                         <input type="submit" value="Order" name="{{ item.name }}">
                     </form>
                 </div>
-            {% endfor %}   
+            {% endfor %} 
+            <div class="card">
+                <div>
+                    <img id="game" src="/media/Irishcoffee.jpeg" alt="Irish Coffee">
+                </div>
+                <script>
+                    game.onclick = function(){
+                        let start = Date.now();
+                        let timer = setInterval(function() {
+                            let timePassed = Date.now() - start;
+                            game.style.left = timePassed/20 + 'px';
+                            if (timePassed > 10000) clearInterval(timer);
+                        }, 10);
+                    }
+                </script>
+                <div class="text">Irish Coffee</div>
+                <div class="price">2.5</div>
+                <form action="{% url 'orderahead'%}"  method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Order" name="Irish Coffee">
+                </form>
+            </div> 
         </div>
     </body>
 </html>

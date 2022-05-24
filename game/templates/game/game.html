@@ -7,14 +7,32 @@
             Secret game
         </title>
         <link rel="stylesheet" href="{% static 'game/game.css' %}">
-        <script src="game.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                document.querySelector('form').onsubmit = function(){
+                    const name = document.querySelector('#name').value;
+                    alert(`Hi, ${name}. You find my secret game. If you pass all levels I will give you a surprise`)
+                }
+            });
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelector('select').onchange = function(){
+                    document.querySelector('h1').style.color = this.value;
+                }
+            });
+        </script>
     </head>
     <body>
         <form>
             <h1>What's your name?</h1>
-            <input type="text" id="name" placeholder="Name">
+            <input autofocus type="text" id="name" placeholder="Name">
             <p></p>
             <input type="submit" id="submit" value="Start game"> 
         </form>
+        <select>
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+        </select>
     </body>
 </html>
